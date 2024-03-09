@@ -14,97 +14,93 @@
     <script src="https://sandcastle.cesium.com/CesiumUnminified/Cesium.js"></script>
     <script src="https://sandcastle.cesium.com/Sandcastle-header.js"></script>
   </head>
-  <body
-    class="sandcastle-loading"
-    data-sandcastle-bucket="bucket-requirejs.html"
-  >
-<style>
-      @import "css/bucket.css";
-    </style>
+  <body>
     <div id="cesiumContainer" class="fullSize"></div>
-    <div id="loadingOverlay"><h1>Loading...</h1></div>
-    <div id="toolbar"></div>
+    <div id="loadingOverlay">
+      <h1>Loading...</h1>
+    </div>
+    <div id="toolbar"> </div>  
     <script id="cesium_sandcastle_script">
-window.startup = async function (Cesium) {
-    'use strict';
-//Sandcastle_Begin
+      window.startup = async function (Cesium) {
+          'use strict';
+      //Sandcastle_Begin
 
-Cesium.Ion.defaultAccessToken = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiI0MjYyMGFkZi0xNDQyLTQyZWQtYmJmNC0yNTY1NjZhMzAwMWUiLCJpZCI6ODEwOTMsImlhdCI6MTY0MzQ3Nzk4OH0.7rbYkumxt8nQFzYd0Fe6JT276nbIf4jUcP2iL_HrykQ";
-var viewer = new Cesium.Viewer('cesiumContainer', {timeline : false,
-animation : false,
-baseLayerPicker : false,
-homeButton : false,
-sceneModePicker : false,
-navigationHelpButton : false,
-geocoder : false
-});
+      Cesium.Ion.defaultAccessToken = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiI0MjYyMGFkZi0xNDQyLTQyZWQtYmJmNC0yNTY1NjZhMzAwMWUiLCJpZCI6ODEwOTMsImlhdCI6MTY0MzQ3Nzk4OH0.7rbYkumxt8nQFzYd0Fe6JT276nbIf4jUcP2iL_HrykQ";
+      var viewer = new Cesium.Viewer('cesiumContainer', {timeline : false,
+      animation : false,
+      baseLayerPicker : false,
+      homeButton : false,
+      sceneModePicker : false,
+      navigationHelpButton : false,
+      geocoder : false
+      });
 
-var globe = viewer.scene.globe;
-var camera = viewer.scene.camera;
+      var globe = viewer.scene.globe;
+      var camera = viewer.scene.camera;
 
-viewer.scene.globe.show = false;
-viewer.scene.skyAtmosphere.show = false;
-viewer.scene.skyBox.show = true;
+      viewer.scene.globe.show = false;
+      viewer.scene.skyAtmosphere.show = false;
+      viewer.scene.skyBox.show = true;
 
-viewer.bottomContainer.style.display = 'none';
+      viewer.bottomContainer.style.display = 'none';
 
-const directionalLight = new Cesium.DirectionalLight({
-  direction: new Cesium.Cartesian3(
-    0.2454278300540191,
-    0.8842635425193919,
-    0.39729481195458805
-  ),
-  intensity:25,
- });
+      const directionalLight = new Cesium.DirectionalLight({
+        direction: new Cesium.Cartesian3(
+          0.2454278300540191,
+          0.8842635425193919,
+          0.39729481195458805
+        ),
+        intensity:25,
+      });
 
-viewer.scene.light = directionalLight;
+      viewer.scene.light = directionalLight;
 
-var scratchNormal = new Cesium.Cartesian3();
-var previousPosition = new Cesium.Cartesian3();
-var previousDirection = new Cesium.Cartesian3();
-var previousUp = new Cesium.Cartesian3();
-var previousRight = new Cesium.Cartesian3();
+      var scratchNormal = new Cesium.Cartesian3();
+      var previousPosition = new Cesium.Cartesian3();
+      var previousDirection = new Cesium.Cartesian3();
+      var previousUp = new Cesium.Cartesian3();
+      var previousRight = new Cesium.Cartesian3();
 
-const tileset = await Cesium.Cesium3DTileset.fromIonAssetId(928514);
-  viewer.scene.primitives.add(tileset);
-  await viewer.zoomTo(tileset);
+      const tileset = await Cesium.Cesium3DTileset.fromIonAssetId(928514);
+        viewer.scene.primitives.add(tileset);
+        await viewer.zoomTo(tileset);
 
 
 
-viewer.scene.postUpdate.addEventListener(function() {
-  var normal = globe.ellipsoid.geodeticSurfaceNormal(
-    camera.position,
-    scratchNormal
-  );
+      viewer.scene.postUpdate.addEventListener(function() {
+        var normal = globe.ellipsoid.geodeticSurfaceNormal(
+          camera.position,
+          scratchNormal
+        );
 
-  var dotProduct = Cesium.Cartesian3.dot(camera.direction, normal);
-  
-  if (dotProduct >= -0.4) {
-    camera.position = Cesium.Cartesian3.clone(previousPosition, camera.position);
-    camera.direction = Cesium.Cartesian3.clone(previousDirection, camera.direction);
-    camera.up = Cesium.Cartesian3.clone(previousUp, camera.up);
-    camera.right = Cesium.Cartesian3.clone(previousRight, camera.right);
-  } else {
-    previousPosition = Cesium.Cartesian3.clone(camera.position, previousPosition);
-    previousDirection = Cesium.Cartesian3.clone(camera.direction, previousDirection);
-    previousUp = Cesium.Cartesian3.clone(camera.up, previousUp);
-    previousRight = Cesium.Cartesian3.clone(camera.right, previousRight);
-  }
-});
+        var dotProduct = Cesium.Cartesian3.dot(camera.direction, normal);
+        
+        if (dotProduct >= -0.4) {
+          camera.position = Cesium.Cartesian3.clone(previousPosition, camera.position);
+          camera.direction = Cesium.Cartesian3.clone(previousDirection, camera.direction);
+          camera.up = Cesium.Cartesian3.clone(previousUp, camera.up);
+          camera.right = Cesium.Cartesian3.clone(previousRight, camera.right);
+        } else {
+          previousPosition = Cesium.Cartesian3.clone(camera.position, previousPosition);
+          previousDirection = Cesium.Cartesian3.clone(camera.direction, previousDirection);
+          previousUp = Cesium.Cartesian3.clone(camera.up, previousUp);
+          previousRight = Cesium.Cartesian3.clone(camera.right, previousRight);
+        }
+      });
 
-viewer.scene.screenSpaceCameraController.minimumZoomDistance = 10e1;
-viewer.scene.screenSpaceCameraController.maximumZoomDistance = 1e2;
+      viewer.scene.screenSpaceCameraController.minimumZoomDistance = 10e1;
+      viewer.scene.screenSpaceCameraController.maximumZoomDistance = 1e2;
 
-viewer.scene.screenSpaceCameraController.inertialSpin = 2;//Sandcastle_End
-    Sandcastle.finishedLoading();
-};
-if (typeof Cesium !== 'undefined') {
-    window.startupCalled = true;
-    window.startup(Cesium).catch((error) => {
-      "use strict";
-      console.error(error);
-    });
-}
-</script>
+      viewer.scene.screenSpaceCameraController.inertialSpin = 2;//Sandcastle_End
+          Sandcastle.finishedLoading();
+      };
+      if (typeof Cesium !== 'undefined') {
+          window.startupCalled = true;
+          window.startup(Cesium).catch((error) => {
+            "use strict";
+            console.error(error);
+          });
+      }
+  </script>
 </body>
 </html>
