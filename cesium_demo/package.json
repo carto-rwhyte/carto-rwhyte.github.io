@@ -9,6 +9,7 @@
   "author": "rw",
   "license": "ISC",
   "dependencies": {
+    "cesium": "^1.115.0",
     "cesiumjs": "^1.10.0"
   }
 }
