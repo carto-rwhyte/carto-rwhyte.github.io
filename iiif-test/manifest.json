@@ -1,0 +1,60 @@
+{
+	"@context": "http://iiif.io/api/presentation/2/context.json",
+	"@id": "http://d4267ee8-becd-424a-b1ed-838ce356118c",
+	"@type": "sc:Manifest",
+	"label": "test manifest",
+	"metadata": [],
+	"description": [
+		{
+			"@value": "this is a test description",
+			"@language": "en"
+		}
+	],
+	"license": "https://creativecommons.org/licenses/by/3.0/",
+	"attribution": "rwhyte",
+	"sequences": [
+		{
+			"@id": "http://a9e7712b-195e-4fc8-9e8f-f78c5a7df4d5",
+			"@type": "sc:Sequence",
+			"label": [
+				{
+					"@value": "Normal Sequence",
+					"@language": "en"
+				}
+			],
+			"canvases": [
+				{
+					"@id": "http://34f42b46-29d4-42a5-bd7a-1b1a2dd4dcc6",
+					"@type": "sc:Canvas",
+					"label": "Empty canvas",
+					"height": 15480,
+					"width": 9795,
+					"images": [
+						{
+							"@context": "http://iiif.io/api/presentation/2/context.json",
+							"@id": "http://4466b988-9cf7-4388-9193-ffe31a7777b7",
+							"@type": "oa:Annotation",
+							"motivation": "sc:painting",
+							"resource": {
+								"@id": "https://carto-rwhyte.github.io/iiif-test/iiif/12509039/full/full/0/default.jpg",
+								"@type": "dctypes:Image",
+								"format": "image/jpeg",
+								"service": {
+									"@context": "http://iiif.io/api/image/2/context.json",
+									"@id": "https://carto-rwhyte.github.io/iiif-test/iiif/12509039",
+									"profile": "http://iiif.io/api/image/2/level0.json"
+								},
+								"height": 15480,
+								"width": 9795
+							},
+							"on": "http://34f42b46-29d4-42a5-bd7a-1b1a2dd4dcc6"
+						}
+					],
+					"related": ""
+				}
+			]
+		}
+	],
+	"structures": [],
+	"viewingDirection": "left-to-right"
+}
