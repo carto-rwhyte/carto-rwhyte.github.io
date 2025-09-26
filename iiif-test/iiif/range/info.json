@@ -1,0 +1,32 @@
+{
+  "tiles" : [ {
+    "scaleFactors" : [ 32, 16, 8, 4, 2, 1 ],
+    "width" : 1024,
+    "height" : 1024
+  } ],
+  "protocol" : "http://iiif.io/api/image",
+  "sizes" : [ {
+    "width" : 256,
+    "height" : 128
+  }, {
+    "width" : 512,
+    "height" : 256
+  }, {
+    "width" : 1024,
+    "height" : 512
+  }, {
+    "width" : 2048,
+    "height" : 1024
+  }, {
+    "width" : 4096,
+    "height" : 2048
+  }, {
+    "width" : 8192,
+    "height" : 4096
+  } ],
+  "profile" : "http://iiif.io/api/image/2/level0.json",
+  "width" : 8192,
+  "@id" : "https://carto-rwhyte.github.io/iiif-test/iiif/range",
+  "@context" : "http://iiif.io/api/image/2/context.json",
+  "height" : 4096
+}

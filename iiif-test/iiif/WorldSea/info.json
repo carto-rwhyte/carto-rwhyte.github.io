@@ -1,0 +1,32 @@
+{
+  "tiles" : [ {
+    "scaleFactors" : [ 32, 16, 8, 4, 2, 1 ],
+    "width" : 1024,
+    "height" : 1024
+  } ],
+  "protocol" : "http://iiif.io/api/image",
+  "sizes" : [ {
+    "width" : 181,
+    "height" : 181
+  }, {
+    "width" : 362,
+    "height" : 362
+  }, {
+    "width" : 723,
+    "height" : 723
+  }, {
+    "width" : 1446,
+    "height" : 1445
+  }, {
+    "width" : 2891,
+    "height" : 2889
+  }, {
+    "width" : 5782,
+    "height" : 5778
+  } ],
+  "profile" : "http://iiif.io/api/image/2/level0.json",
+  "width" : 5782,
+  "@id" : "https://carto-rwhyte.github.io/iiif-test/iiif/WorldSea",
+  "@context" : "http://iiif.io/api/image/2/context.json",
+  "height" : 5778
+}
