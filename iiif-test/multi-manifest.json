@@ -57,7 +57,7 @@
 					"@type": "sc:Canvas",
 					"label": "watercolor",
 					"height": 15480,
-					"width": 4096,
+					"width": 30960,
 					"images": [
 						{
 							"@context": "http://iiif.io/api/presentation/2/context.json",
