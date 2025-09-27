@@ -16,7 +16,7 @@
 		{
 			"@id": "http://26d49170-af11-456a-a0d8-ec85b45481f2",
 			"@type": "sc:Sequence",
-			"viewingHint": "paged",
+			"viewingHint": "individuals",
 			"viewingDirection": "left-to-right",
 			"label": [
 				{
