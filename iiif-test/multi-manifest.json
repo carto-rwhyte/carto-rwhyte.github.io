@@ -87,7 +87,7 @@
 					"@id": "http://82ecd977-b732-4c1c-9759-3a99a7a5aebe",
 					"@type": "sc:Canvas",
 					"label": "World Sea",
-					"height": 5778,
+					"height": 15480,
 					"width": 5782,
 					"images": [
 						{
@@ -116,7 +116,7 @@
 					"@id": "http://acb214c4-e58e-42be-a645-33da77d803b1",
 					"@type": "sc:Canvas",
 					"label": "planetarium",
-					"height": 2000,
+					"height": 15480,
 					"width": 3000,
 					"images": [
 						{
@@ -145,7 +145,7 @@
 					"@id": "http://0a5d1364-3ffa-47b6-a9ef-711e3ac58ede",
 					"@type": "sc:Canvas",
 					"label": "range render",
-					"height": 4096,
+					"height": 15480,
 					"width": 8192,
 					"images": [
 						{
