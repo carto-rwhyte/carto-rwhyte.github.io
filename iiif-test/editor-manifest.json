@@ -7,12 +7,12 @@
   ],
   "label": {
     "none": [
-      "[Click to edit label]"
+      "Atlas of Unfinished Maps"
     ]
   },
   "summary": {
     "en": [
-      "[Click to edit description]"
+      "A collection of map images to test a virtual atlas idea"
     ]
   },
   "requiredStatement": {
@@ -23,7 +23,7 @@
     },
     "value": {
       "none": [
-        "[Click to edit attribution]"
+        "rwhyte"
       ]
     }
   },
@@ -39,6 +39,12 @@
           "Geologic"
         ]
       },
+      "summary": {
+        "en": [
+          "Map summary here"
+        ]
+      },
+      "rights": "http://creativecommons.org/licenses/by-nc-sa/4.0/",
       "items": [
         {
           "id": "http://39b49d50-29bc-4f05-9f45-98a0bc5c3e10/annotation-page",
@@ -76,9 +82,10 @@
       "width": 30960,
       "label": {
         "none": [
-          "watercolor"
+          "Watercolor world"
         ]
       },
+      "rights": "http://creativecommons.org/licenses/by-nc-sa/4.0/",
       "items": [
         {
           "id": "http://59b8f94c-5f89-4f8a-b412-9f24ab355897/annotation-page",
@@ -110,6 +117,39 @@
       ]
     },
     {
+      "id": "http://b1fb1a37-ebb7-4f8e-b361-83a6a81c88be/canvas/kpmb8g6yy59-mg2k7630",
+      "type": "Canvas",
+      "height": 2302,
+      "width": 4752,
+      "label": {
+        "en": [
+          "Static jpeg"
+        ]
+      },
+      "rights": "http://creativecommons.org/licenses/by-nc-sa/4.0/",
+      "items": [
+        {
+          "id": "http://b1fb1a37-ebb7-4f8e-b361-83a6a81c88be/canvas/kpmb8g6yy59-mg2k7630/annotation-page/pybnrfn35lp-mg2k7630",
+          "type": "AnnotationPage",
+          "items": [
+            {
+              "id": "http://b1fb1a37-ebb7-4f8e-b361-83a6a81c88be/annotation/00vyj7xzemc3-mg2k7624",
+              "type": "Annotation",
+              "motivation": "painting",
+              "target": "http://b1fb1a37-ebb7-4f8e-b361-83a6a81c88be/canvas/kpmb8g6yy59-mg2k7630",
+              "body": {
+                "id": "https://carto-rwhyte.github.io/iiif-test/iiif/wc2/wc2.jpg",
+                "type": "Image",
+                "format": "image/jpeg",
+                "height": 2302,
+                "width": 4752
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
       "id": "http://82ecd977-b732-4c1c-9759-3a99a7a5aebe",
       "type": "Canvas",
       "height": 15480,
@@ -119,6 +159,7 @@
           "World Sea"
         ]
       },
+      "rights": "http://creativecommons.org/licenses/by-nc-sa/4.0/",
       "items": [
         {
           "id": "http://82ecd977-b732-4c1c-9759-3a99a7a5aebe/annotation-page",
@@ -156,9 +197,10 @@
       "width": 23220,
       "label": {
         "none": [
-          "planetarium"
+          "Planetarium"
         ]
       },
+      "rights": "http://creativecommons.org/licenses/by-nc-sa/4.0/",
       "items": [
         {
           "id": "http://acb214c4-e58e-42be-a645-33da77d803b1/annotation-page",
@@ -196,9 +238,10 @@
       "width": 30960,
       "label": {
         "none": [
-          "range render"
+          "Range render"
         ]
       },
+      "rights": "http://creativecommons.org/licenses/by-nc-sa/4.0/",
       "items": [
         {
           "id": "http://0a5d1364-3ffa-47b6-a9ef-711e3ac58ede/annotation-page",
@@ -236,9 +279,15 @@
       "width": 23782,
       "label": {
         "none": [
-          "isometric"
+          "Large Map 20k x 10k"
         ]
       },
+      "summary": {
+        "en": [
+          "Blender render mosaic"
+        ]
+      },
+      "rights": "http://creativecommons.org/licenses/by-nc-sa/4.0/",
       "items": [
         {
           "id": "http://0852f819-ffb7-491b-b41f-5e1adc6a0e18/annotation-page",
