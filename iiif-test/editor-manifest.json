@@ -1,0 +1,273 @@
+{
+  "@context": "http://iiif.io/api/presentation/3/context.json",
+  "id": "http://b1fb1a37-ebb7-4f8e-b361-83a6a81c88be",
+  "type": "Manifest",
+  "behavior": [
+    "paged"
+  ],
+  "label": {
+    "none": [
+      "[Click to edit label]"
+    ]
+  },
+  "summary": {
+    "en": [
+      "[Click to edit description]"
+    ]
+  },
+  "requiredStatement": {
+    "label": {
+      "none": [
+        "Attribution"
+      ]
+    },
+    "value": {
+      "none": [
+        "[Click to edit attribution]"
+      ]
+    }
+  },
+  "rights": "http://creativecommons.org/licenses/by/3.0/",
+  "items": [
+    {
+      "id": "http://39b49d50-29bc-4f05-9f45-98a0bc5c3e10",
+      "type": "Canvas",
+      "height": 15480,
+      "width": 9795,
+      "label": {
+        "none": [
+          "Geologic"
+        ]
+      },
+      "items": [
+        {
+          "id": "http://39b49d50-29bc-4f05-9f45-98a0bc5c3e10/annotation-page",
+          "type": "AnnotationPage",
+          "items": [
+            {
+              "id": "http://a271bfee-134f-4ecc-b697-059a558bdd8b",
+              "type": "Annotation",
+              "@context": "http://iiif.io/api/presentation/3/context.json",
+              "motivation": "painting",
+              "target": "http://39b49d50-29bc-4f05-9f45-98a0bc5c3e10",
+              "body": {
+                "id": "https://carto-rwhyte.github.io/iiif-test/iiif/12509039/full/full/0/default.jpg",
+                "type": "Image",
+                "format": "image/jpeg",
+                "height": 15480,
+                "width": 9795,
+                "service": [
+                  {
+                    "@id": "https://carto-rwhyte.github.io/iiif-test/iiif/12509039",
+                    "@type": "ImageService2",
+                    "profile": "level0"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "http://59b8f94c-5f89-4f8a-b412-9f24ab355897",
+      "type": "Canvas",
+      "height": 15480,
+      "width": 30960,
+      "label": {
+        "none": [
+          "watercolor"
+        ]
+      },
+      "items": [
+        {
+          "id": "http://59b8f94c-5f89-4f8a-b412-9f24ab355897/annotation-page",
+          "type": "AnnotationPage",
+          "items": [
+            {
+              "id": "http://77264bf2-ce42-432c-8dfd-191971a4e7c0",
+              "type": "Annotation",
+              "@context": "http://iiif.io/api/presentation/3/context.json",
+              "motivation": "painting",
+              "target": "http://59b8f94c-5f89-4f8a-b412-9f24ab355897",
+              "body": {
+                "id": "https://carto-rwhyte.github.io/iiif-test/iiif/wc/full/full/0/default.jpg",
+                "type": "Image",
+                "format": "image/jpeg",
+                "height": 2048,
+                "width": 4096,
+                "service": [
+                  {
+                    "@id": "https://carto-rwhyte.github.io/iiif-test/iiif/wc",
+                    "@type": "ImageService2",
+                    "profile": "level0"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "http://82ecd977-b732-4c1c-9759-3a99a7a5aebe",
+      "type": "Canvas",
+      "height": 15480,
+      "width": 15480,
+      "label": {
+        "none": [
+          "World Sea"
+        ]
+      },
+      "items": [
+        {
+          "id": "http://82ecd977-b732-4c1c-9759-3a99a7a5aebe/annotation-page",
+          "type": "AnnotationPage",
+          "items": [
+            {
+              "id": "http://585fbb91-4ddb-42f0-89b5-6fdeab6d0a35",
+              "type": "Annotation",
+              "@context": "http://iiif.io/api/presentation/3/context.json",
+              "motivation": "painting",
+              "target": "http://82ecd977-b732-4c1c-9759-3a99a7a5aebe",
+              "body": {
+                "id": "https://carto-rwhyte.github.io/iiif-test/iiif/WorldSea/full/full/0/default.jpg",
+                "type": "Image",
+                "format": "image/jpeg",
+                "height": 5778,
+                "width": 5782,
+                "service": [
+                  {
+                    "@id": "https://carto-rwhyte.github.io/iiif-test/iiif/WorldSea",
+                    "@type": "ImageService2",
+                    "profile": "level0"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "http://acb214c4-e58e-42be-a645-33da77d803b1",
+      "type": "Canvas",
+      "height": 15480,
+      "width": 23220,
+      "label": {
+        "none": [
+          "planetarium"
+        ]
+      },
+      "items": [
+        {
+          "id": "http://acb214c4-e58e-42be-a645-33da77d803b1/annotation-page",
+          "type": "AnnotationPage",
+          "items": [
+            {
+              "id": "http://e71d685d-cdfa-43a2-84e6-00044fcbe811",
+              "type": "Annotation",
+              "@context": "http://iiif.io/api/presentation/3/context.json",
+              "motivation": "painting",
+              "target": "http://acb214c4-e58e-42be-a645-33da77d803b1",
+              "body": {
+                "id": "https://carto-rwhyte.github.io/iiif-test/iiif/planetarium/full/full/0/default.jpg",
+                "type": "Image",
+                "format": "image/jpeg",
+                "height": 2000,
+                "width": 3000,
+                "service": [
+                  {
+                    "@id": "https://carto-rwhyte.github.io/iiif-test/iiif/planetarium",
+                    "@type": "ImageService2",
+                    "profile": "level0"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "http://0a5d1364-3ffa-47b6-a9ef-711e3ac58ede",
+      "type": "Canvas",
+      "height": 15480,
+      "width": 30960,
+      "label": {
+        "none": [
+          "range render"
+        ]
+      },
+      "items": [
+        {
+          "id": "http://0a5d1364-3ffa-47b6-a9ef-711e3ac58ede/annotation-page",
+          "type": "AnnotationPage",
+          "items": [
+            {
+              "id": "http://150667ba-497b-4c36-b53e-11f48a7f254e",
+              "type": "Annotation",
+              "@context": "http://iiif.io/api/presentation/3/context.json",
+              "motivation": "painting",
+              "target": "http://0a5d1364-3ffa-47b6-a9ef-711e3ac58ede",
+              "body": {
+                "id": "https://carto-rwhyte.github.io/iiif-test/iiif/range/full/full/0/default.jpg",
+                "type": "Image",
+                "format": "image/jpeg",
+                "height": 4096,
+                "width": 8192,
+                "service": [
+                  {
+                    "@id": "https://carto-rwhyte.github.io/iiif-test/iiif/range",
+                    "@type": "ImageService2",
+                    "profile": "level0"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "http://0852f819-ffb7-491b-b41f-5e1adc6a0e18",
+      "type": "Canvas",
+      "height": 11858,
+      "width": 23782,
+      "label": {
+        "none": [
+          "isometric"
+        ]
+      },
+      "items": [
+        {
+          "id": "http://0852f819-ffb7-491b-b41f-5e1adc6a0e18/annotation-page",
+          "type": "AnnotationPage",
+          "items": [
+            {
+              "id": "http://ab120b34-297e-4b98-bf71-962ab50c8824",
+              "type": "Annotation",
+              "@context": "http://iiif.io/api/presentation/3/context.json",
+              "motivation": "painting",
+              "target": "http://0852f819-ffb7-491b-b41f-5e1adc6a0e18",
+              "body": {
+                "id": "https://carto-rwhyte.github.io/iiif-test/iiif/ISO_MDO/full/full/0/default.jpg",
+                "type": "Image",
+                "format": "image/jpeg",
+                "height": 11858,
+                "width": 23782,
+                "service": [
+                  {
+                    "@id": "https://carto-rwhyte.github.io/iiif-test/iiif/ISO_MDO",
+                    "@type": "ImageService2",
+                    "profile": "level0"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
