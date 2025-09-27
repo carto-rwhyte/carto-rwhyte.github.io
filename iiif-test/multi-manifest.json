@@ -88,7 +88,7 @@
 					"@type": "sc:Canvas",
 					"label": "World Sea",
 					"height": 15480,
-					"width": 5782,
+					"width": 15480,
 					"images": [
 						{
 							"@context": "http://iiif.io/api/presentation/2/context.json",
@@ -117,7 +117,7 @@
 					"@type": "sc:Canvas",
 					"label": "planetarium",
 					"height": 15480,
-					"width": 3000,
+					"width": 23220,
 					"images": [
 						{
 							"@context": "http://iiif.io/api/presentation/2/context.json",
@@ -146,7 +146,7 @@
 					"@type": "sc:Canvas",
 					"label": "range render",
 					"height": 15480,
-					"width": 8192,
+					"width": 30960,
 					"images": [
 						{
 							"@context": "http://iiif.io/api/presentation/2/context.json",
