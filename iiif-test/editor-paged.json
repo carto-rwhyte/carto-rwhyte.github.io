@@ -1,0 +1,519 @@
+{
+  "@context": "http://iiif.io/api/presentation/3/context.json",
+  "id": "https://example.org/0vrwflzdmkff-mg2kpftp",
+  "type": "Manifest",
+  "behavior": [
+    "paged"
+  ],
+  "label": {
+    "en": [
+      "Atlas of Unfinished Maps"
+    ]
+  },
+  "summary": {
+    "en": [
+      "A collection of map images to test a virtual atlas idea"
+    ]
+  },
+  "rights": "http://creativecommons.org/licenses/by-nc/4.0/",
+  "items": [
+    {
+      "id": "https://example.org/0vrwflzdmkff-mg2kpftp/canvas/7nd8jq0thee-mg2kqazu",
+      "type": "Canvas",
+      "height": 15480,
+      "width": 9795,
+      "label": {
+        "en": [
+          "Geologic"
+        ]
+      },
+      "items": [
+        {
+          "id": "https://example.org/0vrwflzdmkff-mg2kpftp/canvas/7nd8jq0thee-mg2kqazu/annotation-page/vxp8l7me5oc-mg2kqazu",
+          "type": "AnnotationPage",
+          "items": [
+            {
+              "id": "https://example.org/0vrwflzdmkff-mg2kpftp/annotation/w3bznlpy7f-mg2kqazt",
+              "type": "Annotation",
+              "motivation": "painting",
+              "target": "https://example.org/0vrwflzdmkff-mg2kpftp/canvas/7nd8jq0thee-mg2kqazu",
+              "body": {
+                "id": "https://carto-rwhyte.github.io/iiif-test/iiif/12509039/full/max/0/default.jpg",
+                "type": "Image",
+                "format": "image/jpeg",
+                "height": 15480,
+                "width": 9795,
+                "service": [
+                  {
+                    "tiles": [
+                      {
+                        "scaleFactors": [
+                          32,
+                          16,
+                          8,
+                          4,
+                          2,
+                          1
+                        ],
+                        "width": 1024,
+                        "height": 1024
+                      }
+                    ],
+                    "protocol": "http://iiif.io/api/image",
+                    "sizes": [
+                      {
+                        "width": 307,
+                        "height": 484
+                      },
+                      {
+                        "width": 613,
+                        "height": 968
+                      },
+                      {
+                        "width": 1225,
+                        "height": 1935
+                      },
+                      {
+                        "width": 2449,
+                        "height": 3870
+                      },
+                      {
+                        "width": 4898,
+                        "height": 7740
+                      },
+                      {
+                        "width": 9795,
+                        "height": 15480
+                      }
+                    ],
+                    "profile": "http://iiif.io/api/image/2/level0.json",
+                    "width": 9795,
+                    "@id": "https://carto-rwhyte.github.io/iiif-test/iiif/12509039",
+                    "@context": "http://iiif.io/api/image/2/context.json",
+                    "height": 15480,
+                    "id": "https://carto-rwhyte.github.io/iiif-test/iiif/12509039"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "https://example.org/0vrwflzdmkff-mg2kpftp/canvas/4umd41sjlav-mg2xbvzr",
+      "type": "Canvas",
+      "height": 15480,
+      "width": 30960,
+      "label": {
+        "en": [
+          "World Watercolor scaled"
+        ]
+      },
+      "items": [
+        {
+          "id": "https://example.org/0vrwflzdmkff-mg2kpftp/canvas/4umd41sjlav-mg2xbvzr/annotation-page/r5k92ovpfaf-mg2xbvzr",
+          "type": "AnnotationPage",
+          "items": [
+            {
+              "id": "https://example.org/0vrwflzdmkff-mg2kpftp/annotation/cv0aztvveqh-mg2xbvzr",
+              "type": "Annotation",
+              "motivation": "painting",
+              "target": "https://example.org/0vrwflzdmkff-mg2kpftp/canvas/4umd41sjlav-mg2xbvzr",
+              "body": {
+                "id": "https://carto-rwhyte.github.io/iiif-test/iiif/wc/full/max/0/default.jpg",
+                "type": "Image",
+                "format": "image/jpeg",
+                "height": 2048,
+                "width": 4096,
+                "service": [
+                  {
+                    "tiles": [
+                      {
+                        "scaleFactors": [
+                          32,
+                          16,
+                          8,
+                          4,
+                          2,
+                          1
+                        ],
+                        "width": 1024,
+                        "height": 1024
+                      }
+                    ],
+                    "protocol": "http://iiif.io/api/image",
+                    "sizes": [
+                      {
+                        "width": 128,
+                        "height": 64
+                      },
+                      {
+                        "width": 256,
+                        "height": 128
+                      },
+                      {
+                        "width": 512,
+                        "height": 256
+                      },
+                      {
+                        "width": 1024,
+                        "height": 512
+                      },
+                      {
+                        "width": 2048,
+                        "height": 1024
+                      },
+                      {
+                        "width": 4096,
+                        "height": 2048
+                      }
+                    ],
+                    "profile": "http://iiif.io/api/image/2/level0.json",
+                    "width": 4096,
+                    "@id": "https://carto-rwhyte.github.io/iiif-test/iiif/wc",
+                    "@context": "http://iiif.io/api/image/2/context.json",
+                    "height": 2048,
+                    "id": "https://carto-rwhyte.github.io/iiif-test/iiif/wc"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "https://example.org/0vrwflzdmkff-mg2kpftp/canvas/aupjk8sp6v4-mg2kstrx",
+      "type": "Canvas",
+      "height": 15480,
+      "width": 15480,
+      "label": {
+        "en": [
+          "World Sea"
+        ]
+      },
+      "items": [
+        {
+          "id": "https://example.org/0vrwflzdmkff-mg2kpftp/canvas/aupjk8sp6v4-mg2kstrx/annotation-page/d81323iroo8-mg2kstrx",
+          "type": "AnnotationPage",
+          "items": [
+            {
+              "id": "https://example.org/0vrwflzdmkff-mg2kpftp/annotation/8d3c1he6ki-mg2kstrx",
+              "type": "Annotation",
+              "motivation": "painting",
+              "target": "https://example.org/0vrwflzdmkff-mg2kpftp/canvas/aupjk8sp6v4-mg2kstrx",
+              "body": {
+                "id": "https://carto-rwhyte.github.io/iiif-test/iiif/WorldSea/full/max/0/default.jpg",
+                "type": "Image",
+                "format": "image/jpeg",
+                "height": 5778,
+                "width": 5782,
+                "service": [
+                  {
+                    "tiles": [
+                      {
+                        "scaleFactors": [
+                          32,
+                          16,
+                          8,
+                          4,
+                          2,
+                          1
+                        ],
+                        "width": 1024,
+                        "height": 1024
+                      }
+                    ],
+                    "protocol": "http://iiif.io/api/image",
+                    "sizes": [
+                      {
+                        "width": 181,
+                        "height": 181
+                      },
+                      {
+                        "width": 362,
+                        "height": 362
+                      },
+                      {
+                        "width": 723,
+                        "height": 723
+                      },
+                      {
+                        "width": 1446,
+                        "height": 1445
+                      },
+                      {
+                        "width": 2891,
+                        "height": 2889
+                      },
+                      {
+                        "width": 5782,
+                        "height": 5778
+                      }
+                    ],
+                    "profile": "http://iiif.io/api/image/2/level0.json",
+                    "width": 5782,
+                    "@id": "https://carto-rwhyte.github.io/iiif-test/iiif/WorldSea",
+                    "@context": "http://iiif.io/api/image/2/context.json",
+                    "height": 5778,
+                    "id": "https://carto-rwhyte.github.io/iiif-test/iiif/WorldSea"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "https://example.org/0vrwflzdmkff-mg2kpftp/canvas/dnk4hqko4u5-mg2kt54p",
+      "type": "Canvas",
+      "height": 15480,
+      "width": 23220,
+      "label": {
+        "en": [
+          "Planetarium"
+        ]
+      },
+      "items": [
+        {
+          "id": "https://example.org/0vrwflzdmkff-mg2kpftp/canvas/dnk4hqko4u5-mg2kt54p/annotation-page/9vt28jrsf2v-mg2kt54p",
+          "type": "AnnotationPage",
+          "items": [
+            {
+              "id": "https://example.org/0vrwflzdmkff-mg2kpftp/annotation/mfa7h91d56-mg2kt54p",
+              "type": "Annotation",
+              "motivation": "painting",
+              "target": "https://example.org/0vrwflzdmkff-mg2kpftp/canvas/dnk4hqko4u5-mg2kt54p",
+              "body": {
+                "id": "https://carto-rwhyte.github.io/iiif-test/iiif/planetarium/full/max/0/default.jpg",
+                "type": "Image",
+                "format": "image/jpeg",
+                "height": 2000,
+                "width": 3000,
+                "service": [
+                  {
+                    "tiles": [
+                      {
+                        "scaleFactors": [
+                          32,
+                          16,
+                          8,
+                          4,
+                          2,
+                          1
+                        ],
+                        "width": 1024,
+                        "height": 1024
+                      }
+                    ],
+                    "protocol": "http://iiif.io/api/image",
+                    "sizes": [
+                      {
+                        "width": 94,
+                        "height": 63
+                      },
+                      {
+                        "width": 188,
+                        "height": 125
+                      },
+                      {
+                        "width": 375,
+                        "height": 250
+                      },
+                      {
+                        "width": 750,
+                        "height": 500
+                      },
+                      {
+                        "width": 1500,
+                        "height": 1000
+                      },
+                      {
+                        "width": 3000,
+                        "height": 2000
+                      }
+                    ],
+                    "profile": "http://iiif.io/api/image/2/level0.json",
+                    "width": 3000,
+                    "@id": "https://carto-rwhyte.github.io/iiif-test/iiif/planetarium",
+                    "@context": "http://iiif.io/api/image/2/context.json",
+                    "height": 2000,
+                    "id": "https://carto-rwhyte.github.io/iiif-test/iiif/planetarium"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "https://example.org/0vrwflzdmkff-mg2kpftp/canvas/oje8i65z8qc-mg2ktftt",
+      "type": "Canvas",
+      "height": 15480,
+      "width": 30960,
+      "label": {
+        "en": [
+          "Range render"
+        ]
+      },
+      "items": [
+        {
+          "id": "https://example.org/0vrwflzdmkff-mg2kpftp/canvas/oje8i65z8qc-mg2ktftt/annotation-page/51fwlsgr6v-mg2ktftt",
+          "type": "AnnotationPage",
+          "items": [
+            {
+              "id": "https://example.org/0vrwflzdmkff-mg2kpftp/annotation/dyo53z6grp8-mg2ktftt",
+              "type": "Annotation",
+              "motivation": "painting",
+              "target": "https://example.org/0vrwflzdmkff-mg2kpftp/canvas/oje8i65z8qc-mg2ktftt",
+              "body": {
+                "id": "https://carto-rwhyte.github.io/iiif-test/iiif/range/full/max/0/default.jpg",
+                "type": "Image",
+                "format": "image/jpeg",
+                "height": 4096,
+                "width": 8192,
+                "service": [
+                  {
+                    "tiles": [
+                      {
+                        "scaleFactors": [
+                          32,
+                          16,
+                          8,
+                          4,
+                          2,
+                          1
+                        ],
+                        "width": 1024,
+                        "height": 1024
+                      }
+                    ],
+                    "protocol": "http://iiif.io/api/image",
+                    "sizes": [
+                      {
+                        "width": 256,
+                        "height": 128
+                      },
+                      {
+                        "width": 512,
+                        "height": 256
+                      },
+                      {
+                        "width": 1024,
+                        "height": 512
+                      },
+                      {
+                        "width": 2048,
+                        "height": 1024
+                      },
+                      {
+                        "width": 4096,
+                        "height": 2048
+                      },
+                      {
+                        "width": 8192,
+                        "height": 4096
+                      }
+                    ],
+                    "profile": "http://iiif.io/api/image/2/level0.json",
+                    "width": 8192,
+                    "@id": "https://carto-rwhyte.github.io/iiif-test/iiif/range",
+                    "@context": "http://iiif.io/api/image/2/context.json",
+                    "height": 4096,
+                    "id": "https://carto-rwhyte.github.io/iiif-test/iiif/range"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "https://example.org/0vrwflzdmkff-mg2kpftp/canvas/lk3mpe23jr-mg2ktt1k",
+      "type": "Canvas",
+      "height": 11858,
+      "width": 23782,
+      "label": {
+        "en": [
+          "Large map 20k x 10k"
+        ]
+      },
+      "items": [
+        {
+          "id": "https://example.org/0vrwflzdmkff-mg2kpftp/canvas/lk3mpe23jr-mg2ktt1k/annotation-page/72t2l34n5m2-mg2ktt1k",
+          "type": "AnnotationPage",
+          "items": [
+            {
+              "id": "https://example.org/0vrwflzdmkff-mg2kpftp/annotation/1i97f7wed21j-mg2ktt1k",
+              "type": "Annotation",
+              "motivation": "painting",
+              "target": "https://example.org/0vrwflzdmkff-mg2kpftp/canvas/lk3mpe23jr-mg2ktt1k",
+              "body": {
+                "id": "https://carto-rwhyte.github.io/iiif-test/iiif/ISO_MDO/full/max/0/default.jpg",
+                "type": "Image",
+                "format": "image/jpeg",
+                "height": 11858,
+                "width": 23782,
+                "service": [
+                  {
+                    "tiles": [
+                      {
+                        "scaleFactors": [
+                          32,
+                          16,
+                          8,
+                          4,
+                          2,
+                          1
+                        ],
+                        "width": 1024,
+                        "height": 1024
+                      }
+                    ],
+                    "protocol": "http://iiif.io/api/image",
+                    "sizes": [
+                      {
+                        "width": 744,
+                        "height": 371
+                      },
+                      {
+                        "width": 1487,
+                        "height": 742
+                      },
+                      {
+                        "width": 2973,
+                        "height": 1483
+                      },
+                      {
+                        "width": 5946,
+                        "height": 2965
+                      },
+                      {
+                        "width": 11891,
+                        "height": 5929
+                      },
+                      {
+                        "width": 23782,
+                        "height": 11858
+                      }
+                    ],
+                    "profile": "http://iiif.io/api/image/2/level0.json",
+                    "width": 23782,
+                    "@id": "https://carto-rwhyte.github.io/iiif-test/iiif/ISO_MDO",
+                    "@context": "http://iiif.io/api/image/2/context.json",
+                    "height": 11858,
+                    "id": "https://carto-rwhyte.github.io/iiif-test/iiif/ISO_MDO"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
