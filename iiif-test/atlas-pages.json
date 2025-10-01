@@ -117,7 +117,13 @@
                   "Geologic"
                 ]
               },
+              "summary": {
+                "en": [
+                  "from David Rumsey Map Collection"
+                ]
+              },
               "motivation": "painting",
+              "rights": "http://creativecommons.org/licenses/by-nc-sa/4.0/",
               "target": "https://example.org/khrhpupts5-mg7in37q/canvas/lgd4y9xzm4c-mg7ipp27#xywh=475,335,3500,5532",
               "body": {
                 "id": "https://carto-rwhyte.github.io/iiif-test/iiif/12509039/full/max/0/default.jpg",
@@ -329,7 +335,60 @@
             "en": [
               "Anno"
             ]
-          }
+          },
+          "items": [
+            {
+              "id": "https://example.org/khrhpupts5-mg7in37q/canvas/lgd4y9xzm4c-mg7ipp27/annotations/saaxy4ieu6-mg7jypr6/annotation/3uh5hzgyf6s-mg7la8pd",
+              "type": "Annotation",
+              "label": {
+                "en": [
+                  "Geologic Map"
+                ]
+              },
+              "summary": {
+                "en": [
+                  "David Rumsey Map Collection"
+                ]
+              },
+              "motivation": "describing",
+              "target": "https://example.org/khrhpupts5-mg7in37q/canvas/lgd4y9xzm4c-mg7ipp27#xywh=650,498,3149,5215",
+              "body": []
+            },
+            {
+              "id": "https://example.org/khrhpupts5-mg7in37q/canvas/lgd4y9xzm4c-mg7ipp27/annotations/saaxy4ieu6-mg7jypr6/annotation/6qipa4nltun-mg7lb954",
+              "type": "Annotation",
+              "label": {
+                "en": [
+                  "World Sea"
+                ]
+              },
+              "summary": {
+                "en": [
+                  "Rwhyte of the Cartographer's Guild"
+                ]
+              },
+              "motivation": "describing",
+              "target": "https://example.org/khrhpupts5-mg7in37q/canvas/lgd4y9xzm4c-mg7ipp27#xywh=4228,374,3399,3383",
+              "body": []
+            },
+            {
+              "id": "https://example.org/khrhpupts5-mg7in37q/canvas/lgd4y9xzm4c-mg7ipp27/annotations/saaxy4ieu6-mg7jypr6/annotation/n0a0b3nlkh-mg7lcvo9",
+              "type": "Annotation",
+              "label": {
+                "en": [
+                  "Early watercolor map"
+                ]
+              },
+              "summary": {
+                "en": [
+                  "Rwhyte"
+                ]
+              },
+              "motivation": "describing",
+              "target": "https://example.org/khrhpupts5-mg7in37q/canvas/lgd4y9xzm4c-mg7ipp27#xywh=4244,3913,3445,1715",
+              "body": []
+            }
+          ]
         }
       ]
     },
@@ -343,6 +402,20 @@
           "Span"
         ]
       },
+      "metadata": [
+        {
+          "label": {
+            "en": [
+              ""
+            ]
+          },
+          "value": {
+            "en": [
+              ""
+            ]
+          }
+        }
+      ],
       "thumbnail": [
         {
           "id": "https://carto-rwhyte.github.io/iiif-test/iiif/open-pages/full/512,/0/default.jpg",
@@ -492,6 +565,36 @@
                   }
                 ]
               }
+            }
+          ]
+        }
+      ],
+      "annotations": [
+        {
+          "id": "https://example.org/khrhpupts5-mg7in37q/canvas/pi2dyr479qn-mg7iwl41/annotations/yufrs54srdb-mg7lijfz",
+          "type": "AnnotationPage",
+          "label": {
+            "en": [
+              "Anno2"
+            ]
+          },
+          "items": [
+            {
+              "id": "https://example.org/khrhpupts5-mg7in37q/canvas/pi2dyr479qn-mg7iwl41/annotations/yufrs54srdb-mg7lijfz/annotation/h0705hgapy-mg7litcj",
+              "type": "Annotation",
+              "label": {
+                "en": [
+                  "Zoomy Map Rendering"
+                ]
+              },
+              "summary": {
+                "en": [
+                  "20k x 10k pixel zoom map image"
+                ]
+              },
+              "motivation": "describing",
+              "target": "https://example.org/khrhpupts5-mg7in37q/canvas/pi2dyr479qn-mg7iwl41#xywh=416,257,7257,3632",
+              "body": []
             }
           ]
         }
