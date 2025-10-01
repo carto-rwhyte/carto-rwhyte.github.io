@@ -26,7 +26,7 @@
   } ],
   "profile" : "http://iiif.io/api/image/2/level0.json",
   "width" : 8192,
-  "@id" : "http://localhost:8887/iiif/open-pages",
+  "@id" : "https://carto-rwhyte.github.io/iiif-test/iiif/open-pages",
   "@context" : "http://iiif.io/api/image/2/context.json",
   "height" : 6322
 }
