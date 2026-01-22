@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+
+  <!-- Include the CesiumJS JavaScript and CSS files -->
+
+  <script src="https://cesium.com/downloads/cesiumjs/releases/1.137/Build/Cesium/Cesium.js"></script>
+
+  <link href="https://cesium.com/downloads/cesiumjs/releases/1.137/Build/Cesium/Widgets/widgets.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+  <div id="cesiumContainer"></div>
+
+  <script type="module">
+    // Your access token can be found at: https://ion.cesium.com/tokens.
+    // This is the default access token from your ion account
+
+
+    Cesium.Ion.defaultAccessToken = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiI0MjYyMGFkZi0xNDQyLTQyZWQtYmJmNC0yNTY1NjZhMzAwMWUiLCJpZCI6ODEwOTMsImlhdCI6MTY0MzQ3Nzk4OH0.7rbYkumxt8nQFzYd0Fe6JT276nbIf4jUcP2iL_HrykQ';
+
+    // Initialize the Cesium Viewer in the HTML element with the `cesiumContainer` ID.
+    const viewer = new Cesium.Viewer("cesiumContainer", {
+  terrainProvider: await Cesium.CesiumTerrainProvider.fromIonAssetId(4370673),
+  baseLayer: Cesium.ImageryLayer.fromProviderAsync(
+    Cesium.IonImageryProvider.fromAssetId(4370684),
+  ),
+  baseLayerPicker: false,
+  timeline: false,
+  animation: false,
+  sceneModePicker: false,
+  baseLayerPicker: false,
+  geocoder: false,
+  navigationInstructionsInitiallyVisible: false,
+});
+
+//const imageryLayer = viewer.imageryLayers.addImageryProvider(
+//await Cesium.IonImageryProvider.fromAssetId(4370684))
+
+const scene = viewer.scene;
+scene.verticalExaggeration = 5.0;
+
+scene.globe.showWaterEffect = false;
+scene.globe.enableLighting = true;
+
+scene.light = new Cesium.DirectionalLight({
+  direction: new Cesium.Cartesian3(1, 0, 0), // Updated every frame
+});
+
+// Update the light position base on the camera
+const scratchNormal = new Cesium.Cartesian3();
+scene.preRender.addEventListener(function (scene, time) {
+  const surfaceNormal = Cesium.Ellipsoid.WGS84.geodeticSurfaceNormal(
+    scene.camera.positionWC,
+    scratchNormal,
+  );
+  const negativeNormal = Cesium.Cartesian3.negate(surfaceNormal, surfaceNormal);
+  scene.light.direction = Cesium.Cartesian3.normalize(
+    Cesium.Cartesian3.add(negativeNormal, scene.camera.rightWC, surfaceNormal),
+    scene.light.direction,
+  );
+});   
+
+  </script>
+
+ </div>
+
+</body>
+
+</html>
