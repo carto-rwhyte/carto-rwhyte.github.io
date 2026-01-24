@@ -13,7 +13,21 @@
   <link href="https://cesium.com/downloads/cesiumjs/releases/1.137/Build/Cesium/Widgets/widgets.css" rel="stylesheet">
 
 </head>
+<style>
+html, body, #cesiumContainer {
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    overflow: hidden; /* Prevents scrollbars */
+}
 
+#cesiumContainer {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+</style>
 <body>
 
   <div id="cesiumContainer"></div>
@@ -34,17 +48,15 @@
   baseLayerPicker: false,
   timeline: false,
   animation: false,
-  sceneModePicker: false,
   baseLayerPicker: false,
   geocoder: false,
   navigationInstructionsInitiallyVisible: false,
 });
 
-//const imageryLayer = viewer.imageryLayers.addImageryProvider(
-//await Cesium.IonImageryProvider.fromAssetId(4370684))
-
 const scene = viewer.scene;
 scene.verticalExaggeration = 5.0;
+
+Cesium.Fullscreen.requestFullscreen(document.body)
 
 scene.globe.showWaterEffect = false;
 scene.globe.enableLighting = true;
