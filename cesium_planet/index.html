@@ -3,20 +3,15 @@
 <html lang="en">
 
 <head>
-
   <meta charset="utf-8">
-
   <!-- Include the CesiumJS JavaScript and CSS files -->
-
   <script src="https://cesium.com/downloads/cesiumjs/releases/1.137/Build/Cesium/Cesium.js"></script>
-
   <link href="https://cesium.com/downloads/cesiumjs/releases/1.137/Build/Cesium/Widgets/widgets.css" rel="stylesheet">
-
-</head>
+  </head>
 <style>
 html, body, #cesiumContainer {
     width: 100%;
-    height: 100vh;
+    height: 100%;
     margin: 0;
     padding: 0;
     overflow: hidden; /* Prevents scrollbars */
@@ -28,57 +23,195 @@ html, body, #cesiumContainer {
     left: 0;
 }
 </style>
+
 <body>
-
   <div id="cesiumContainer"></div>
-
+  
   <script type="module">
+    //import * as Cesium from "cesium";
+    //import Sandcastle from "./Sandcastle-client.js"; 
     // Your access token can be found at: https://ion.cesium.com/tokens.
     // This is the default access token from your ion account
 
 
-    Cesium.Ion.defaultAccessToken = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiI0MjYyMGFkZi0xNDQyLTQyZWQtYmJmNC0yNTY1NjZhMzAwMWUiLCJpZCI6ODEwOTMsImlhdCI6MTY0MzQ3Nzk4OH0.7rbYkumxt8nQFzYd0Fe6JT276nbIf4jUcP2iL_HrykQ';
+Cesium.Ion.defaultAccessToken = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiI0MjYyMGFkZi0xNDQyLTQyZWQtYmJmNC0yNTY1NjZhMzAwMWUiLCJpZCI6ODEwOTMsImlhdCI6MTY0MzQ3Nzk4OH0.7rbYkumxt8nQFzYd0Fe6JT276nbIf4jUcP2iL_HrykQ';
+
+//Clock Settings
+const clock = new Cesium.Clock({
+  startTime: Cesium.JulianDate.fromIso8601("2026-01-01"),
+  currentTime: Cesium.JulianDate.fromIso8601("2027-11-01"),
+  stopTime: Cesium.JulianDate.fromIso8601("2126-01-01"),
+  clockRange: Cesium.ClockRange.LOOP_STOP, // loop when we hit the end time
+  clockStep: Cesium.ClockStep.SYSTEM_CLOCK_MULTIPLIER,
+  multiplier: 1000, // how much time to advance each tick
+  shouldAnimate: true, // Animation on by default
+});
 
     // Initialize the Cesium Viewer in the HTML element with the `cesiumContainer` ID.
-    const viewer = new Cesium.Viewer("cesiumContainer", {
-  terrainProvider: await Cesium.CesiumTerrainProvider.fromIonAssetId(4370673),
-  baseLayer: Cesium.ImageryLayer.fromProviderAsync(
-    Cesium.IonImageryProvider.fromAssetId(4370684),
-  ),
+const viewer = new Cesium.Viewer("cesiumContainer", {
+terrainProvider: await Cesium.CesiumTerrainProvider.fromIonAssetId(4370673),
+baseLayer: Cesium.ImageryLayer.fromProviderAsync(Cesium.IonImageryProvider.fromAssetId(4370684)),
   baseLayerPicker: false,
   timeline: false,
   animation: false,
+  sceneModePicker: false,
   baseLayerPicker: false,
   geocoder: false,
   navigationInstructionsInitiallyVisible: false,
+
+  showSkyAtmosphere: true,
+  showGroundAtmosphere: true,
+  clockViewModel: new Cesium.ClockViewModel(clock),
 });
+
+
+//Cesium.Fullscreen.requestFullscreen(document.body)
+
+function cameraEvents() {
+  Sandcastle.declare(cameraEvents);
+
+  const camera = viewer.camera;
+  removeStart = camera.moveStart.addEventListener(function () {
+    viewChanged.style.display = "block";
+  });
+  removeEnd = camera.moveEnd.addEventListener(function () {
+    viewChanged.style.display = "none";
+  });
+}
+
+// The camera events implementation
+function setupCameraEvents() {
+    const camera = viewer.camera;
+    const viewChanged = document.getElementById("viewChanged");
+            
+    // Add event listeners
+    const removeStart = camera.moveStart.addEventListener(function () {
+        viewChanged.style.display = "block";
+        console.log("Camera started to move");
+    });
+            
+    const removeEnd = camera.moveEnd.addEventListener(function () {
+        viewChanged.style.display = "none";
+        console.log("Camera stopped moving");
+    });
+
+            // You can store the remove functions if you need to remove the listeners later, e.g.,
+            // window.cleanupCameraEvents = function() { removeStart(); removeEnd(); };
+}
+
+// Call the function to set up the events
+setupCameraEvents();
+
+
+//Camera Settings
+const cameraChanged = document.getElementById("cameraChanged");
+let removeChanged;
+const viewChanged = document.getElementById("viewChanged");
+let referenceFramePrimitive;
+let removeStart;
+let removeEnd;
+
 
 const scene = viewer.scene;
 scene.verticalExaggeration = 5.0;
+viewer.scene.screenSpaceCameraController.minimumZoomDistance = 1000000;
+viewer.scene.screenSpaceCameraController.maximumZoomDistance = 10000000 * 5;
 
-Cesium.Fullscreen.requestFullscreen(document.body)
+//Planet & Lighting Effects
 
+const globe = scene.globe;
+scene.globe.showWaterEffect = true;
+scene.globe.enableLighting = true;
+
+scene.verticalExaggeration = 5.0;
 scene.globe.showWaterEffect = false;
 scene.globe.enableLighting = true;
 
-scene.light = new Cesium.DirectionalLight({
-  direction: new Cesium.Cartesian3(1, 0, 0), // Updated every frame
+scene.highDynamicRange = false;
+globe.enableLighting = true;
+globe.atmosphereLightIntensity = 10.0;
+
+// Set scene defaults
+const sunLight = new Cesium.SunLight();
+scene.light = sunLight;
+scene.globe.dynamicAtmosphereLighting = true;
+scene.globe.dynamicAtmosphereLightingFromSun = true;
+scene.atmosphere.dynamicLighting = Cesium.DynamicAtmosphereLightingType.SUNLIGHT;
+
+
+function icrf(scene, time) {
+  if (scene.mode !== Cesium.SceneMode.SCENE3D) {
+    return;
+  }
+
+  const icrfToFixed = Cesium.Transforms.computeIcrfToFixedMatrix(time);
+  if (Cesium.defined(icrfToFixed)) {
+    const camera = viewer.camera;
+    const offset = Cesium.Cartesian3.clone(camera.position);
+    const transform = Cesium.Matrix4.fromRotationTranslation(icrfToFixed);
+    camera.lookAtTransform(transform, offset);
+  }
+}
+
+
+
+function reset() {
+  scene.completeMorph();
+  viewer.entities.removeAll();
+  scene.primitives.remove(referenceFramePrimitive);
+  scene.tweens.removeAll();
+
+  if (Cesium.defined(removeStart)) {
+    removeStart();
+    removeEnd();
+
+    viewChanged.style.display = "none";
+
+    removeStart = undefined;
+    removeEnd = undefined;
+  }
+
+  if (Cesium.defined(removeChanged)) {
+    removeChanged();
+    removeChanged = undefined;
+
+    cameraChanged.style.display = "none";
+  }
+
+  viewer.camera.lookAtTransform(Cesium.Matrix4.IDENTITY);
+
+  //clock.multiplier = 1.0;
+  scene.postUpdate.removeEventListener(icrf);
+  scene.globe.enableLighting = false;
+}
+
+scene.morphComplete.addEventListener(function () {
+  reset();
 });
 
-// Update the light position base on the camera
-const scratchNormal = new Cesium.Cartesian3();
-scene.preRender.addEventListener(function (scene, time) {
-  const surfaceNormal = Cesium.Ellipsoid.WGS84.geodeticSurfaceNormal(
-    scene.camera.positionWC,
-    scratchNormal,
-  );
-  const negativeNormal = Cesium.Cartesian3.negate(surfaceNormal, surfaceNormal);
-  scene.light.direction = Cesium.Cartesian3.normalize(
-    Cesium.Cartesian3.add(negativeNormal, scene.camera.rightWC, surfaceNormal),
-    scene.light.direction,
-  );
-});   
 
+function setReferenceFrame() {
+  Sandcastle.declare(setReferenceFrame);
+
+  const center = Cesium.Cartesian3.fromDegrees(0, 0);
+  const transform = Cesium.Transforms.eastNorthUpToFixedFrame(center);
+
+  // View in east-north-up frame
+  const camera = viewer.camera;
+  camera.constrainedAxis = Cesium.Cartesian3.UNIT_Z;
+  camera.lookAtTransform(
+    transform,
+    new Cesium.Cartesian3(-120000.0, -120000.0, 120000.0),
+  );
+
+  // Show reference frame.  Not required.
+  referenceFramePrimitive = scene.primitives.add(
+    new Cesium.DebugModelMatrixPrimitive({
+      modelMatrix: transform,
+      length: 100000.0,
+    }),
+  );
+}
   </script>
 
  </div>
